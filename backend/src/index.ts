@@ -6,7 +6,7 @@ import cors from 'cors';
 import path from 'path';
 
 // Load environment configuration
-dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
+dotenv.config({ path: `.env` });
 
 const app = express();
 const PORT = process.env.PORT || 3008;
