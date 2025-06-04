@@ -3,7 +3,6 @@ const mysql = require('mysql2/promise');
 const bodyParser = require('body-parser');
 import dotenv from 'dotenv';
 import cors from 'cors';
-import path from 'path'
 
 // Load environment configuration
 dotenv.config({ path: `.env` });
@@ -11,11 +10,13 @@ dotenv.config({ path: `.env` });
 const app = express();
 const PORT = process.env.PORT || 3008;
 const isProduction = process.env.NODE_ENV === 'production';
+
 console.log(`Environment: ${process.env.NODE_ENV}`);
+
 // Security and CORS configuration
 if (isProduction) {
     app.use(cors({
-        origin: process.env.ALLOWED_ORIGINS?.split(',') || [process.env.ALLOWED_ORIGIN || ''],
+        origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://ttb.les-enovateurs.com'],
         credentials: true
     }));
 } else {
@@ -38,18 +39,6 @@ const dbConfig = {
 
 // Create connection pool for better performance
 const pool = mysql.createPool(dbConfig);
-
-// Serve static files in production
-if (isProduction) {
-    app.use(express.static(path.join(__dirname, '../frontend/dist')));
-    
-    // Catch all handler for SPA
-    app.get('*', (req, res) => {
-        if (!req.url.startsWith('/api')) {
-            res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
-        }
-    });
-}
 
 // Your existing API routes with connection pool
 app.get('/api/event/:slug', async (req: Request<{slug: string}>, res: Response) => {
@@ -77,9 +66,6 @@ app.post('/api/customer', async (req: Request, res: Response) => {
         const conn = await pool.getConnection();
 
         try {
-            // Your existing logic here...
-            // (keeping the same logic but using the connection from pool)
-            
             // First, get the event_id from event_slug
             const [events] = await conn.execute(
                 'SELECT id FROM event WHERE slug = ? AND ended_at IS NULL',
@@ -166,6 +152,12 @@ app.post('/api/customer', async (req: Request, res: Response) => {
 // Graceful shutdown
 process.on('SIGTERM', async () => {
     console.log('SIGTERM received, shutting down gracefully');
+    await pool.end();
+    process.exit(0);
+});
+
+process.on('SIGINT', async () => {
+    console.log('SIGINT received, shutting down gracefully');
     await pool.end();
     process.exit(0);
 });
