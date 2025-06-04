@@ -1,12 +1,12 @@
 import express, { Request, Response } from 'express';
 const mysql = require('mysql2/promise');
 const bodyParser = require('body-parser');
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import cors from 'cors';
 import path from 'path'
 
 // Load environment configuration
-// dotenv.config({ path: `.env` });
+dotenv.config({ path: `.env` });
 
 const app = express();
 const PORT = process.env.PORT || 3008;
@@ -15,7 +15,7 @@ console.log(`Environment: ${process.env.NODE_ENV}`);
 // Security and CORS configuration
 if (isProduction) {
     app.use(cors({
-        origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://ttb.les-enovateurs.com'],
+        origin: process.env.ALLOWED_ORIGINS?.split(',') || [process.env.ALLOWED_ORIGIN || ''],
         credentials: true
     }));
 } else {
