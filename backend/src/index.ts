@@ -3,7 +3,6 @@ const mysql = require('mysql2/promise');
 const bodyParser = require('body-parser');
 import dotenv from 'dotenv';
 import cors from 'cors';
-import path from 'path';
 
 // Load environment configuration
 dotenv.config({ path: `.env` });
@@ -34,8 +33,6 @@ const dbConfig = {
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
-    acquireTimeout: 60000,
-    timeout: 60000
 };
 
 // Create connection pool for better performance
