@@ -15,7 +15,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 // Security and CORS configuration
 if (isProduction) {
     app.use(cors({
-        origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://yourdomain.com'],
+        origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://ttb.les-enovateurs.com'],
         credentials: true
     }));
 } else {
