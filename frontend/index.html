@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription à l'Événement</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #0ea5e9;
+      --success-color: #10b981;
+      --error-color: #ef4444;
+      --text-color: #334155;
+      --light-bg: #f8fafc;
+      --info-color: #3b82f6;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9fafb;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .required {
+      color: var(--error-color);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+
+    .device-section {
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fafafa;
+    }
+
+    .device-section h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+
+    .device-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .help-link {
+      color: var(--info-color);
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .help-link:hover {
+      text-decoration: underline;
+    }
+
+    .help-icon {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .error {
+      color: var(--error-color);
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .success {
+      color: var(--success-color);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .result-card {
+      background-color: var(--light-bg);
+      border-left: 4px solid var(--success-color);
+    }
+
+    .loading {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .loading::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top-color: var(--primary-color);
+      animation: spin 1s ease infinite;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .device-info {
+      display: flex;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .device-info-column {
+      flex: 1;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .ranking-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .ranking-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .ranking-description {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .event-not-found {
+      text-align: center;
+      padding: 30px;
+      background-color: #fee2e2;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+
+    @media (max-width: 600px) {
+      .device-fields {
+        grid-template-columns: 1fr;
+      }
+
+      .device-info {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>Inscription à l'Événement</h1>
+
+  <!-- Event not found message -->
+  <div id="eventNotFound" class="event-not-found hidden">
+    <h2>Événement non trouvé</h2>
+    <p>Désolé, l'événement que vous recherchez n'existe pas ou est déjà terminé.</p>
+  </div>
+
+  <!-- Registration Form -->
+  <div id="registrationForm" class="card">
+    <div class="form-group">
+      <label for="name">Nom <span class="required">*</span></label>
+      <input type="text" id="name" placeholder="Entrez votre nom complet">
+      <div id="nameError" class="error hidden">Veuillez entrer votre nom</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" id="email" placeholder="Entrez votre adresse email">
+      <div id="emailError" class="error hidden">Veuillez entrer une adresse email valide</div>
+    </div>
+
+    <div class="device-section">
+      <h3>📱 Informations sur votre téléphone</h3>
+
+      <div class="device-fields">
+        <div class="form-group">
+          <label for="deviceBrand">Marque</label>
+          <input type="text" id="deviceBrand" placeholder="ex: Samsung, Apple, Google...">
+        </div>
+
+        <div class="form-group">
+          <label for="deviceModel">Modèle</label>
+          <input type="text" id="deviceModel" placeholder="ex: Galaxy S21, iPhone 13...">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fabricationDate">Date de fabrication <span class="required">*</span></label>
+        <input type="date" id="fabricationDate">
+        <div id="fabricationDateError" class="error hidden">Veuillez sélectionner une date de fabrication</div>
+        <a href="/aide-telephone.html" target="_blank" class="help-link">
+          <span class="help-icon">❓</span>
+          Comment trouver ces informations sur mon téléphone ?
+        </a>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" id="acceptRecontact">
+        J'autorise l'organisateur à me contacter au sujet de cet événement
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" id="acceptNewsletter">
+        Je souhaite recevoir la newsletter
+      </label>
+    </div>
+
+    <button id="submitButton">S'inscrire</button>
+    <div id="submitError" class="error hidden">Une erreur s'est produite. Veuillez réessayer.</div>
+    <div id="loading" class="loading hidden">Envoi de votre inscription...</div>
+  </div>
+
+  <!-- Results display -->
+  <div id="resultCard" class="card result-card hidden">
+    <h2>Inscription Complète ! 🎉</h2>
+    <p>Merci pour votre inscription. Vos informations ont été soumises avec succès.</p>
+
+    <div id="deviceInfo" class="device-info">
+      <div class="device-info-column">
+        <div class="info-label">Téléphone</div>
+        <div id="deviceFullModel">-</div>
+
+        <div class="info-label">Date de Fabrication</div>
+        <div id="deviceFabricationDate">-</div>
+      </div>
+    </div>
+
+    <div id="rankingContainer" class="ranking-container hidden">
+      <h3>🏆 Classement de Votre Téléphone</h3>
+      <div class="ranking-value" id="rankingValue"></div>
+      <div class="ranking-description" id="rankingDescription"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
