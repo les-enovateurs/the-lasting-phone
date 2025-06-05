@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription à l'Événement</title>
+  <title>Inscription - Le Téléphone qui tenait bon</title>
+    <link rel="stylesheet" href="public/global.css">
   <style>
     :root {
       --primary-color: #2563eb;
@@ -222,7 +223,7 @@
 </head>
 <body>
 <div id="app">
-  <h1>Inscription à l'Événement</h1>
+  <h1>Inscription - Le Téléphone qui tenait bon</h1>
 
   <!-- Event not found message -->
   <div id="eventNotFound" class="event-not-found hidden">
@@ -240,8 +241,8 @@
 
     <div class="form-group">
       <label for="email">Email <span class="required">*</span></label>
-      <input type="email" id="email" placeholder="Entrez votre adresse email">
-      <div id="emailError" class="error hidden">Veuillez entrer une adresse email valide</div>
+      <input type="email" id="email" placeholder="Entrez votre adresse e-mail">
+      <div id="emailError" class="error hidden">Veuillez entrer une adresse e-mail valide</div>
     </div>
 
     <div class="device-section">
@@ -250,12 +251,12 @@
       <div class="device-fields">
         <div class="form-group">
           <label for="deviceBrand">Marque</label>
-          <input type="text" id="deviceBrand" placeholder="ex: Samsung, Apple, Google...">
+          <input type="text" id="deviceBrand" placeholder="ex : Samsung, Apple, Google...">
         </div>
 
         <div class="form-group">
           <label for="deviceModel">Modèle</label>
-          <input type="text" id="deviceModel" placeholder="ex: Galaxy S21, iPhone 13...">
+          <input type="text" id="deviceModel" placeholder="ex : Galaxy S21, iPhone 13...">
         </div>
       </div>
 
@@ -273,14 +274,14 @@
     <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="acceptRecontact">
-        J'autorise l'organisateur à me contacter au sujet de cet événement
+        J'autorise l'organisateur à me contacter au sujet de cet événement.
       </label>
     </div>
 
     <div class="form-group">
       <label class="checkbox-label">
         <input type="checkbox" id="acceptNewsletter">
-        Je souhaite recevoir la newsletter
+        Je souhaite recevoir la newsletter mensuelle du média Les e-novateurs.
       </label>
     </div>
 
@@ -313,5 +314,7 @@
 </div>
 
 <script type="module" src="/src/main.ts"></script>
+<script src="public/global.js"></script>
+
 </body>
 </html>

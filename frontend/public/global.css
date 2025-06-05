@@ -1,0 +1,100 @@
+
+/* Styles communs pour les e-novateurs */
+.enovateurs-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.enovateurs-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.enovateurs-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.enovateurs-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.enovateurs-footer {
+    background-color: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.enovateurs-footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.enovateurs-footer-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.enovateurs-footer-links {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.enovateurs-footer-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.enovateurs-footer-links a:hover {
+    text-decoration: underline;
+}
+
+.enovateurs-footer-text {
+    margin: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .enovateurs-logo-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .enovateurs-text {
+        font-size: 16px;
+    }
+
+    .enovateurs-logo {
+        height: 35px;
+    }
+
+    .enovateurs-footer-logo {
+        height: 25px;
+    }
+}

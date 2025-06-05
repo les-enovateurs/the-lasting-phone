@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     rankingDescription.textContent = `📱 Votre téléphone est plus ancien que la moyenne.`;
                 } */
                 else if (percentile < 75) {
-                    rankingDescription.textContent = `✨ Votre téléphone est plus récent que ${percentile}% des participants.`;
+                    rankingDescription.textContent = `✨ ${percentile}% des participants possèdent un téléphone plus récent que le vôtre.`;
                 } else {
                     rankingDescription.textContent = `🆕 Votre téléphone est très récent ! (${percentile}% plus anciens)`;
                 }
