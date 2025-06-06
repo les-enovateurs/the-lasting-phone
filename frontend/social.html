@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Suivez Les e-novateurs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #f3f4f6;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .linktree-container {
+            background: #fff;
+            margin-top: 48px;
+            padding: 32px 24px;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .linktree-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1d4ed8;
+            text-align: center;
+        }
+        .linktree-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: #222;
+            background: #f1f5f9;
+            transition: background 0.2s;
+            border: none;
+            outline: none;
+        }
+        .linktree-link:hover { background: #e0e7ef; }
+        .icon { width: 28px; height: 28px; display: inline-block; }
+        .linkedin { color: #0077b5; }
+        .youtube { color: #FF3D00; }
+        .instagram { color: #C13584; }
+        .mastodon { color: #6364ff; }
+        .rss { color: #f26522; }
+    </style>
+</head>
+<body>
+<div class="linktree-container">
+    <div class="linktree-title">Suivez Les e-novateurs</div>
+    <a class="linktree-link linkedin" href="https://www.linkedin.com/company/les-enovateurs" target="_blank">
+      <span class="icon">
+        <!-- LinkedIn SVG -->
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62z"/></svg>
+      </span>
+        LinkedIn
+    </a>
+    <a class="linktree-link youtube" href="https://www.youtube.com/@les.e-novateurs" target="_blank">
+      <span class="icon">
+        <!-- YouTube SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"/><path fill="#FFF" d="M20 31L20 17 32 24z"/></svg>
+      </span>
+        YouTube
+    </a>
+    <a class="linktree-link instagram" href="https://www.instagram.com/enovateurs.media/" target="_blank">
+      <span class="icon">
+        <!-- Instagram SVG -->
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.634 2.2 15.25 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.77.128 4.87.31 4.13.54c-.74.23-1.36.54-1.98 1.16-.62.62-.93 1.24-1.16 1.98-.23.74-.412 1.64-.47 2.92C.012 8.332 0 8.736 0 12c0 3.264.012 3.668.07 4.948.058 1.28.24 2.18.47 2.92.23.74.54 1.36 1.16 1.98.62.62 1.24.93 1.98 1.16.74.23 1.64.412 2.92.47C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.28-.058 2.18-.24 2.92-.47.74-.23 1.36-.54 1.98-1.16.62-.62.93-1.24 1.16-1.98.23-.74.412-1.64.47-2.92.058-1.28.07-1.684.07-4.948s-.012-3.668-.07-4.948c-.058-1.28-.24-2.18-.47-2.92-.23-.74-.54-1.36-1.16-1.98-.62-.62-1.24-.93-1.98-1.16-.74-.23-1.64-.412-2.92-.47C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+      </span>
+        Instagram
+    </a>
+    <a class="linktree-link mastodon" href="https://mastodon.social/@enovateurs_media" target="_blank" rel="me">
+      <span class="icon">
+        <!-- Mastodon SVG -->
+<svg  viewBox="-9 0 274 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+		<g>
+				<path d="M249.874103,164.084793 C246.121107,183.392442 216.260831,204.522765 181.966269,208.61788 C164.083135,210.751705 146.475762,212.712995 127.700462,211.851797 C96.9952088,210.444977 72.7666374,204.522765 72.7666374,204.522765 C72.7666374,207.511889 72.9509692,210.357972 73.3196328,213.019724 C77.3115222,243.322396 103.36719,245.137696 128.048481,245.984147 C152.959817,246.836498 175.141568,239.842212 175.141568,239.842212 L176.164978,262.363134 C176.164978,262.363134 158.740462,271.719816 127.700462,273.440737 C110.584149,274.381567 89.33143,273.010138 64.5778816,266.458249 C10.8916144,252.248479 1.65880329,195.021567 0.246084399,136.955576 C-0.184514679,119.715392 0.080923109,103.458802 0.080923109,89.8624885 C0.080923109,30.4870046 38.9837803,13.0831336 38.9837803,13.0831336 C58.5996328,4.07447005 92.258619,0.286082949 127.250693,0 L128.110416,0 C163.10249,0.286082949 196.783596,4.07447005 216.397974,13.0831336 C216.397974,13.0831336 255.299356,30.4870046 255.299356,89.8624885 C255.299356,89.8624885 255.787467,133.670046 249.874103,164.084793" fill="#3088D4">
+
+</path>
+				<path d="M209.412536,94.4687189 L209.412536,166.362544 L180.929587,166.362544 L180.929587,96.5818986 C180.929587,81.8722212 174.740462,74.4060461 162.360739,74.4060461 C148.672997,74.4060461 141.812905,83.2628203 141.812905,100.775816 L141.812905,138.970839 L113.498066,138.970839 L113.498066,100.775816 C113.498066,83.2628203 106.636499,74.4060461 92.9487572,74.4060461 C80.5690337,74.4060461 74.3799093,81.8722212 74.3799093,96.5818986 L74.3799093,166.362544 L45.89696,166.362544 L45.89696,94.4687189 C45.89696,79.7752627 49.6381581,68.0989493 57.1529968,59.460424 C64.9023056,50.8218986 75.050877,46.3935115 87.6488494,46.3935115 C102.224333,46.3935115 113.262121,51.9957235 120.560186,63.2016221 L127.654748,75.0947097 L134.750785,63.2016221 C142.047375,51.9957235 153.085163,46.3935115 167.662121,46.3935115 C180.258619,46.3935115 190.40719,50.8218986 198.157974,59.460424 C205.671338,68.0989493 209.412536,79.7752627 209.412536,94.4687189" fill="#FFFFFF">
+
+</path>
+		</g>
+</svg>      </span>
+        Mastodon
+    </a>
+    <a class="linktree-link whatsapp" href="https://whatsapp.com/channel/0029Vandxg860eBZpbSNSt18" target="_blank">
+      <span class="icon">
+        <!-- WhatsApp SVG -->
+<svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <title>Whatsapp-color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+
+</defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Color-" transform="translate(-700.000000, -360.000000)" fill="#67C15E">
+            <path d="M723.993033,360 C710.762252,360 700,370.765287 700,383.999801 C700,389.248451 701.692661,394.116025 704.570026,398.066947 L701.579605,406.983798 L710.804449,404.035539 C714.598605,406.546975 719.126434,408 724.006967,408 C737.237748,408 748,397.234315 748,384.000199 C748,370.765685 737.237748,360.000398 724.006967,360.000398 L723.993033,360.000398 L723.993033,360 Z M717.29285,372.190836 C716.827488,371.07628 716.474784,371.034071 715.769774,371.005401 C715.529728,370.991464 715.262214,370.977527 714.96564,370.977527 C714.04845,370.977527 713.089462,371.245514 712.511043,371.838033 C711.806033,372.557577 710.056843,374.23638 710.056843,377.679202 C710.056843,381.122023 712.567571,384.451756 712.905944,384.917648 C713.258648,385.382743 717.800808,392.55031 724.853297,395.471492 C730.368379,397.757149 732.00491,397.545307 733.260074,397.27732 C735.093658,396.882308 737.393002,395.527239 737.971421,393.891043 C738.54984,392.25405 738.54984,390.857171 738.380255,390.560912 C738.211068,390.264652 737.745308,390.095816 737.040298,389.742615 C736.335288,389.389811 732.90737,387.696673 732.25849,387.470894 C731.623543,387.231179 731.017259,387.315995 730.537963,387.99333 C729.860819,388.938653 729.198006,389.89831 728.661785,390.476494 C728.238619,390.928051 727.547144,390.984595 726.969123,390.744481 C726.193254,390.420348 724.021298,389.657798 721.340985,387.273388 C719.267356,385.42535 717.856938,383.125756 717.448104,382.434484 C717.038871,381.729275 717.405907,381.319529 717.729948,380.938852 C718.082653,380.501232 718.421026,380.191036 718.77373,379.781688 C719.126434,379.372738 719.323884,379.160897 719.549599,378.681068 C719.789645,378.215575 719.62006,377.735746 719.450874,377.382942 C719.281687,377.030139 717.871269,373.587317 717.29285,372.190836 Z" id="Whatsapp">
+
+</path>
+        </g>
+    </g>
+</svg>      </span>
+        WhatsApp
+    </a>
+    <a class="linktree-link telegram" href="https://t.me/enovateurs" target="_blank">
+      <span class="icon">
+        <!-- Telegram SVG -->
+<svg viewBox="0 0 100 100" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+    .st1{fill:#F5BB41;}
+    .st2{fill:#2167D1;}
+    .st3{fill:#3D84F3;}
+    .st4{fill:#4CA853;}
+    .st5{fill:#398039;}
+    .st6{fill:#D74F3F;}
+    .st7{fill:#D43C89;}
+    .st8{fill:#B2005F;}
+    .st9{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+    .st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+    .st11{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#040404;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st12{fill-rule:evenodd;clip-rule:evenodd;}
+    .st13{fill-rule:evenodd;clip-rule:evenodd;fill:#040404;}
+    .st14{fill:url(#SVGID_1_);}
+    .st15{fill:url(#SVGID_2_);}
+    .st16{fill:url(#SVGID_3_);}
+    .st17{fill:url(#SVGID_4_);}
+    .st18{fill:url(#SVGID_5_);}
+    .st19{fill:url(#SVGID_6_);}
+    .st20{fill:url(#SVGID_7_);}
+    .st21{fill:url(#SVGID_8_);}
+    .st22{fill:url(#SVGID_9_);}
+    .st23{fill:url(#SVGID_10_);}
+    .st24{fill:url(#SVGID_11_);}
+    .st25{fill:url(#SVGID_12_);}
+    .st26{fill:url(#SVGID_13_);}
+    .st27{fill:url(#SVGID_14_);}
+    .st28{fill:url(#SVGID_15_);}
+    .st29{fill:url(#SVGID_16_);}
+    .st30{fill:url(#SVGID_17_);}
+    .st31{fill:url(#SVGID_18_);}
+    .st32{fill:url(#SVGID_19_);}
+    .st33{fill:url(#SVGID_20_);}
+    .st34{fill:url(#SVGID_21_);}
+    .st35{fill:url(#SVGID_22_);}
+    .st36{fill:url(#SVGID_23_);}
+    .st37{fill:url(#SVGID_24_);}
+    .st38{fill:url(#SVGID_25_);}
+    .st39{fill:url(#SVGID_26_);}
+    .st40{fill:url(#SVGID_27_);}
+    .st41{fill:url(#SVGID_28_);}
+    .st42{fill:url(#SVGID_29_);}
+    .st43{fill:url(#SVGID_30_);}
+    .st44{fill:url(#SVGID_31_);}
+    .st45{fill:url(#SVGID_32_);}
+    .st46{fill:url(#SVGID_33_);}
+    .st47{fill:url(#SVGID_34_);}
+    .st48{fill:url(#SVGID_35_);}
+    .st49{fill:url(#SVGID_36_);}
+    .st50{fill:url(#SVGID_37_);}
+    .st51{fill:url(#SVGID_38_);}
+    .st52{fill:url(#SVGID_39_);}
+    .st53{fill:url(#SVGID_40_);}
+    .st54{fill:url(#SVGID_41_);}
+    .st55{fill:url(#SVGID_42_);}
+    .st56{fill:url(#SVGID_43_);}
+    .st57{fill:url(#SVGID_44_);}
+    .st58{fill:url(#SVGID_45_);}
+    .st59{fill:#040404;}
+    .st60{fill:url(#SVGID_46_);}
+    .st61{fill:url(#SVGID_47_);}
+    .st62{fill:url(#SVGID_48_);}
+    .st63{fill:url(#SVGID_49_);}
+    .st64{fill:url(#SVGID_50_);}
+    .st65{fill:url(#SVGID_51_);}
+    .st66{fill:url(#SVGID_52_);}
+    .st67{fill:url(#SVGID_53_);}
+    .st68{fill:url(#SVGID_54_);}
+    .st69{fill:url(#SVGID_55_);}
+    .st70{fill:url(#SVGID_56_);}
+    .st71{fill:url(#SVGID_57_);}
+    .st72{fill:url(#SVGID_58_);}
+    .st73{fill:url(#SVGID_59_);}
+    .st74{fill:url(#SVGID_60_);}
+    .st75{fill:url(#SVGID_61_);}
+    .st76{fill:url(#SVGID_62_);}
+    .st77{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+    .st78{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+    .st79{fill:#4BC9FF;}
+    .st80{fill:#5500DD;}
+    .st81{fill:#FF3A00;}
+    .st82{fill:#E6162D;}
+    .st83{fill:#F1F1F1;}
+    .st84{fill:#FF9933;}
+    .st85{fill:#B92B27;}
+    .st86{fill:#00ACED;}
+    .st87{fill:#BD2125;}
+    .st88{fill:#1877F2;}
+    .st89{fill:#6665D2;}
+    .st90{fill:#CE3056;}
+    .st91{fill:#5BB381;}
+    .st92{fill:#61C3EC;}
+    .st93{fill:#E4B34B;}
+    .st94{fill:#181EF2;}
+    .st95{fill:#FF0000;}
+    .st96{fill:#FE466C;}
+    .st97{fill:#FA4778;}
+    .st98{fill:#FF7700;}
+    .st99{fill-rule:evenodd;clip-rule:evenodd;fill:#1F6BF6;}
+    .st100{fill:#520094;}
+    .st101{fill:#4477E8;}
+    .st102{fill:#3D1D1C;}
+    .st103{fill:#FFE812;}
+    .st104{fill:#344356;}
+    .st105{fill:#00CC76;}
+    .st106{fill-rule:evenodd;clip-rule:evenodd;fill:#345E90;}
+    .st107{fill:#1F65D8;}
+    .st108{fill:#EB3587;}
+    .st109{fill-rule:evenodd;clip-rule:evenodd;fill:#603A88;}
+    .st110{fill:#E3CE99;}
+    .st111{fill:#783AF9;}
+    .st112{fill:#FF515E;}
+    .st113{fill:#FF4906;}
+    .st114{fill:#503227;}
+    .st115{fill:#4C7BD9;}
+    .st116{fill:#69C9D0;}
+    .st117{fill:#1B92D1;}
+    .st118{fill:#EB4F4A;}
+    .st119{fill:#513728;}
+    .st120{fill:#FF6600;}
+    .st121{fill-rule:evenodd;clip-rule:evenodd;fill:#B61438;}
+    .st122{fill:#FFFC00;}
+    .st123{fill:#141414;}
+    .st124{fill:#94D137;}
+    .st125{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F1F1;}
+    .st126{fill-rule:evenodd;clip-rule:evenodd;fill:#66E066;}
+    .st127{fill:#2D8CFF;}
+    .st128{fill:#F1A300;}
+    .st129{fill:#4BA2F2;}
+    .st130{fill:#1A5099;}
+    .st131{fill:#EE6060;}
+    .st132{fill-rule:evenodd;clip-rule:evenodd;fill:#F48120;}
+    .st133{fill:#222222;}
+    .st134{fill:url(#SVGID_63_);}
+    .st135{fill:#0077B5;}
+    .st136{fill:#FFCC00;}
+    .st137{fill:#EB3352;}
+    .st138{fill:#F9D265;}
+    .st139{fill:#F5B955;}
+    .st140{fill:#DD2A7B;}
+    .st141{fill:#66E066;}
+    .st142{fill:#EB4E00;}
+    .st143{fill:#FFC794;}
+    .st144{fill:#B5332A;}
+    .st145{fill:#4E85EB;}
+    .st146{fill:#58A45C;}
+    .st147{fill:#F2BC42;}
+    .st148{fill:#D85040;}
+    .st149{fill:#464EB8;}
+    .st150{fill:#7B83EB;}
+</style>
+
+<g id="Layer_1"/>
+
+<g id="Layer_2">
+
+<g>
+
+<path class="st117" d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392    s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431    c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691    c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659    C97.307,8.804,88.723,12.142,88.723,12.142z"/>
+
+</g>
+
+</g>
+
+</svg>      </span>
+        Telegram
+    </a>
+    <a class="linktree-link threads" href="https://www.threads.net/@enovateurs.media" target="_blank">
+      <span class="icon">
+        <!-- Threads SVG (simple @ symbol) -->
+<svg aria-label="Threads" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><path class="x19hqcy" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg>      </span>
+        Threads
+    </a>
+    <a class="linktree-link bsky" href="https://bsky.app/profile/les-enovateurs.bsky.social" target="_blank">
+      <span class="icon">
+        <!-- Bluesky SVG (cloud) -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+    .st1{fill:#FFFFFF;}
+</style>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="250" y1="421.9627" x2="250" y2="18.9327">
+		<stop  offset="0" style="stop-color:#57B8FF"/>
+		<stop  offset="1" style="stop-color:#0C7CFF"/>
+	</linearGradient>
+	<path class="st0" d="M250,465.1L250,465.1c-118.8,0-215.1-96.3-215.1-215.1v0c0-118.8,96.3-215.1,215.1-215.1h0
+		c118.8,0,215.1,96.3,215.1,215.1v0C465.1,368.8,368.8,465.1,250,465.1z"/>
+	<path class="st1" d="M165.3,136c34.3,25.8,71.2,78,84.7,106c13.5-28,50.4-80.2,84.7-106c24.8-18.6,64.9-33,64.9,12.8
+		c0,9.1-5.2,76.8-8.3,87.7c-10.7,38.2-49.6,47.9-84.2,42c60.5,10.3,75.9,44.4,42.7,78.5c-63.1,64.8-90.7-16.3-97.8-37
+		c-1.3-3.8-1.9-5.6-1.9-4.1c0-1.5-0.6,0.3-1.9,4.1c-7.1,20.8-34.7,101.8-97.8,37c-33.2-34.1-17.9-68.2,42.7-78.5
+		c-34.6,5.9-73.5-3.8-84.2-42c-3.1-11-8.3-78.6-8.3-87.7C100.4,103,140.5,117.4,165.3,136L165.3,136z"/>
+</g>
+</svg>
+      </span>
+        Bluesky
+    </a>
+    <a class="linktree-link rss" href="https://les-enovateurs.com/rss/posts.rss" target="_blank">
+      <span class="icon">
+        <!-- RSS SVG -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 455.731 455.731" xml:space="preserve">
+<g>
+	<rect x="0" y="0" style="fill:#F78422;" width="455.731" height="455.731"/>
+	<g>
+		<path style="fill:#FFFFFF;" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348
+			c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348
+			C391.986,303.103,357.971,220.923,296.208,159.16z"/>
+		<path style="fill:#FFFFFF;" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348
+			C282.429,270.196,184.507,172.273,64.143,172.273z"/>
+		<circle style="fill:#FFFFFF;" cx="109.833" cy="346.26" r="46.088"/>
+	</g>
+</g>
+</svg>
+      </span>
+        RSS
+    </a>
+</div>
+</body>
+</html>
