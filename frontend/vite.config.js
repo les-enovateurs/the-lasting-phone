@@ -1,5 +1,7 @@
 
 import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
 
 export default defineConfig({
     build: {
@@ -21,5 +23,15 @@ export default defineConfig({
                 changeOrigin: true
             }
         }
-    }
+    },
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'social.html',
+                    dest: ''
+                }
+            ]
+        })
+    ]
 })
