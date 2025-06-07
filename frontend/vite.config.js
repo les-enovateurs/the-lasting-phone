@@ -30,6 +30,10 @@ export default defineConfig({
                 {
                     src: 'social.html',
                     dest: ''
+                },
+                {
+                    src: 'aide-telephone.html',
+                    dest: ''
                 }
             ]
         })
