@@ -16,47 +16,122 @@
         }
         .linktree-container {
             background: #fff;
-            margin-top: 48px;
-            padding: 32px 24px;
+            margin: 48px auto;
+            padding: 35px 30px;
             border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-            max-width: 400px;
-            width: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 450px;
+            width: calc(100% - 40px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 18px;
+            gap: 16px;
         }
         .linktree-title {
             font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: #1d4ed8;
             text-align: center;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        .linktree-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 60px;
+            height: 3px;
+            background: #1d4ed8;
+            transform: translateX(-50%);
+            border-radius: 3px;
         }
         .linktree-link {
             display: flex;
             align-items: center;
             gap: 12px;
             width: 100%;
-            padding: 12px 18px;
-            border-radius: 8px;
+            padding: 14px 20px;
+            border-radius: 10px;
             font-size: 1.1rem;
             font-weight: 500;
             text-decoration: none;
             color: #222;
             background: #f1f5f9;
-            transition: background 0.2s;
-            border: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
             outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .linktree-link:hover { background: #e0e7ef; }
-        .icon { width: 28px; height: 28px; display: inline-block; }
+        .linktree-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff;
+            border-color: currentColor;
+        }
+        .icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
         .linkedin { color: #0077b5; }
         .youtube { color: #FF3D00; }
         .instagram { color: #C13584; }
         .mastodon { color: #6364ff; }
+        .whatsapp { color: #25D366; }
+        .telegram { color: #0088cc; }
+        .threads { color: #000000; }
+        .bsky { color: #1185FE; }
         .rss { color: #f26522; }
+        .engage { color: #1d4ed8; }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .linktree-container {
+                margin: 20px auto;
+                padding: 25px 15px;
+                border-radius: 12px;
+                gap: 12px;
+                width: calc(100% - 30px);
+            }
+            .linktree-title {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+            .linktree-title:after {
+                width: 40px;
+                height: 2px;
+            }
+            .linktree-link {
+                font-size: 1rem;
+                padding: 12px 14px;
+                gap: 10px;
+            }
+            .icon {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .linktree-container {
+                width: calc(100% - 20px);
+                padding: 20px 10px;
+            }
+            .linktree-link {
+                padding: 10px 12px;
+                font-size: 0.95rem;
+            }
+            .icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -344,6 +419,20 @@
 </svg>
       </span>
         RSS
+    </a>
+    <a class="linktree-link" href="https://les-enovateurs.com" target="_blank">
+      <span class="icon">
+        <!-- RSS SVG -->
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"/><path d="M37.86,51.1A47,47,0,0,1,32,56.7"/><path d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"/><path d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24"/><line x1="10.37" y1="19.9" x2="53.75" y2="19.9"/><line x1="32" y1="6.99" x2="32" y2="56.7"/><line x1="11.05" y1="45.48" x2="37.04" y2="45.48"/><line x1="7.14" y1="32.46" x2="56.86" y2="31.85"/><path d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"/></svg>
+      </span>
+        Lire le média / les-enovateurs.com
+    </a>
+    <a class="linktree-link engage" href="engage.html" target="_blank">
+      <span class="icon">
+        <!-- Engage SVG (hand/heart) -->
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/></svg>
+      </span>
+        Engagez-vous avec nous
     </a>
 </div>
 </body>

@@ -34,6 +34,10 @@ export default defineConfig({
                 {
                     src: 'aide-telephone.html',
                     dest: ''
+                },
+                {
+                    src: 'engage.html',
+                    dest: ''
                 }
             ]
         })
