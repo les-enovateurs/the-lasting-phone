@@ -8,7 +8,7 @@ import cors from 'cors';
 dotenv.config({ path: `.env` });
 
 const app = express();
-const PORT = process.env.PORT || 3008;
+const PORT = process.env.PORT || 3010;
 const isProduction = process.env.NODE_ENV === 'production';
 
 console.log(`Environment: ${process.env.NODE_ENV}`);
