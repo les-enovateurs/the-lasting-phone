@@ -2,6 +2,7 @@
   "$schema": "frontend/node_modules/wrangler/config-schema.json",
   "name": "ttb",
   "main": "worker/index.js",
+  "routes": [{ "pattern": "ttb.les-enovateurs.com", "custom_domain": true }],
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./frontend/dist",
